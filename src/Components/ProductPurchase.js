@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import Purchase from './Purchase';
 import { resetPurchase } from '../Actions/purchActions';
+import MapContainer from './Map';
 
 class ProductPurchase extends Component {
 
@@ -48,6 +49,7 @@ class ProductPurchase extends Component {
 				Latitude: {this.props.latitude}<br/>
 				Longitude: {this.props.longitude}<br/>
 				<button onClick={this.anotherPurchase.bind(this)}>Buy Another!</button>
+				<MapContainer />
 			</div>
 		);
 

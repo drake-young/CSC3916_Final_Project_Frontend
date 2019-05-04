@@ -19,9 +19,6 @@ class AppHeader extends Component
 					<LinkContainer to="/purchase">
 						<NavItem eventKey={1}>Purchase</NavItem>
 					</LinkContainer>
-					<LinkContainer to="/map">
-						<NavItem eventKey={1}>Map</NavItem>
-					</LinkContainer>
 				</Nav>
 			</div>
 		);

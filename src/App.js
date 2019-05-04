@@ -17,7 +17,6 @@ class App extends Component
 					<div>
 						<AppHeader />
 						<Route path="/purchase" render={()=><ProductPurchase />}/>
-						<Route path="/map" render={()=><MapContainer />}/>
 					</div>
 				</HashRouter>
 				</Provider>
