@@ -11,15 +11,17 @@ class AppHeader extends Component
 		return (
 			<div>
 				<Navbar>
-					<Navbar.Brand>
-						Buy Infinity Gauntlet
-					</Navbar.Brand>
+					<Navbar.Header>
+						<Navbar.Brand>
+							Buy Infinity Gauntlet
+						</Navbar.Brand>
+					</Navbar.Header>
+					<Nav>
+						<LinkContainer to="/purchase">
+							<NavItem eventKey={1}>Purchase</NavItem>
+						</LinkContainer>
+					</Nav>
 				</Navbar>
-				<Nav>
-					<LinkContainer to="/purchase">
-						<NavItem eventKey={1}>Purchase</NavItem>
-					</LinkContainer>
-				</Nav>
 			</div>
 		);
 	}
