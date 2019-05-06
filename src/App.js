@@ -5,6 +5,7 @@ import ProductPurchase from './Components/ProductPurchase';
 import {HashRouter,Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './Stores/store';
+import './App.css';
 
 class App extends Component 
 {
