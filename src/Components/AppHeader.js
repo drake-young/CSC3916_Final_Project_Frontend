@@ -12,7 +12,7 @@ class AppHeader extends Component
 			<div>
 				<Navbar>
 					<Navbar.Brand>
-						Buy Our Stuff
+						Buy Infinity Gauntlet
 					</Navbar.Brand>
 				</Navbar>
 				<Nav>
