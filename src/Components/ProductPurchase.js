@@ -57,7 +57,7 @@ class ProductPurchase extends Component {
 						<h4>Cost: Everything</h4><br/>
 						<h4>Color: Gold</h4><br/>
 						<h4>Product Description:</h4>
-						<p>The Infinity Gauntlet was designed to hold six of the &quot;soul gems&quot;, better known as the Infinity Gems. When used in combination their already impressive powers amke the wearer able to do anything they want. It was gathered by the mad Titan Thanos as he took the gems from the Elders of the Universe that had originally carried them.</p>
+						<p>The Infinity Gauntlet was designed to hold six of the &quot;soul gems&quot;, better known as the Infinity Gems. When used in combination their already impressive powers make the wearer able to do anything they want. It was gathered by the mad Titan Thanos as he took the gems from the Elders of the Universe that had originally carried them.</p>
 						<h5>** Infinity Gems Not Included **</h5>
 					</Col>
 					<Col xs={1} sm={0} md={0} lg={0} xl={0}>&nbsp;</Col>
