@@ -27,15 +27,19 @@ class Purchase extends Component
 	
 	updateDetails(event)
 	{
+		let reNameOnCard = /(\w.+\s).+/i;
+		let reCardNumber = /^\d{16}$/;
+		let reCvv = /^\d{3}$/;
+		let reExpirationDate = /^(0[1-9]|10|11|12)\/[0-9]{2}$/;
 		let updateDetails = Object.assign({}, this.state.details);
 		updateDetails[event.target.id] = event.target.value;
 
-		updateDetails["formValidation"] = false;
-
-		if (updateDetails["nameOnCard"] !== '' && updateDetails["cardNumber"] !== '' && updateDetails["cvv"] !== '' && updateDetails["expirationDate"] !== '')
-		{
-			updateDetails["formValidation"] = true;
-		}
+		let invalid = true;
+		invalid = invalid && reNameOnCard.test(updateDetails["nameOnCard"]);
+		invalid = invalid && reCardNumber.test(updateDetails["cardNumber"]);
+		invalid = invalid && reCvv.test(updateDetails["cvv"]);
+		invalid = invalid && reExpirationDate.test(updateDetails["expirationDate"]);
+		updateDetails["formValidation"] = invalid;
 
 		this.setState({
 			details:updateDetails
@@ -66,7 +70,7 @@ class Purchase extends Component
 						Card Number
 					</Col>
 					<Col sm={9}>
-						<FormControl className = {this.state.details.cardNumber === '' ? "input-err" : ""} onChange={this.updateDetails} value={this.state.details.cardNumber} type="text" placeholder="e.g. 1234567890" />
+						<FormControl className = {this.state.details.cardNumber === '' ? "input-err" : ""} onChange={this.updateDetails} value={this.state.details.cardNumber} type="text" placeholder="e.g. 1234123412341234" />
 					</Col>
 				</FormGroup>
 				<FormGroup controlId="cvv">
