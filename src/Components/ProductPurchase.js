@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import Purchase from './Purchase';
 import { resetPurchase } from '../Actions/purchActions';
+import { Button } from 'react-bootstrap';
 import MapContainer from './Map';
 
 class ProductPurchase extends Component {
@@ -43,12 +44,10 @@ class ProductPurchase extends Component {
         );
         const formSubmitted = (
 			<div>
-				Posted: {this.props.purchasePosted ? "True" : "False"}<br/>
-				Success: {this.props.success ? "True" : "False"}<br/>
-				Message: {this.props.message}<br/>
-				Latitude: {this.props.latitude}<br/>
-				Longitude: {this.props.longitude}<br/>
-				<button onClick={this.anotherPurchase.bind(this)}>Buy Another!</button>
+                <br/>
+                <h1>{this.props.message}</h1><br/>
+				<Button className = {"btn-success"} onClick={this.anotherPurchase.bind(this)}>Purchase Another</Button>
+                <br/><br/><br/>
 				<MapContainer />
 			</div>
 		);

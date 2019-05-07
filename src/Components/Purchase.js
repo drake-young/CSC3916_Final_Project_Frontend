@@ -19,7 +19,8 @@ class Purchase extends Component
 				nameOnCard:'',
 				cardNumber:'',
 				cvv:'',
-				expirationDate:''
+				expirationDate:'',
+				formValidation:false
 			}
 		};
 	}
@@ -28,6 +29,14 @@ class Purchase extends Component
 	{
 		let updateDetails = Object.assign({}, this.state.details);
 		updateDetails[event.target.id] = event.target.value;
+
+		updateDetails["formValidation"] = false;
+
+		if (updateDetails["nameOnCard"] !== '' && updateDetails["cardNumber"] !== '' && updateDetails["cvv"] !== '' && updateDetails["expirationDate"] !== '')
+		{
+			updateDetails["formValidation"] = true;
+		}
+
 		this.setState({
 			details:updateDetails
 		});
@@ -43,12 +52,13 @@ class Purchase extends Component
 	{
 		return (
 			<Form horizontal>
+				<br/>
 				<FormGroup controlId="nameOnCard">
 					<Col componentClass={ControlLabel} sm={3}>
-						Name on Card
+						Card Holder
 					</Col>
 					<Col sm={9}>
-						<FormControl onChange={this.updateDetails} value={this.state.details.nameOnCard} type="text" placeholder="Your Name..." />
+						<FormControl className = {this.state.details.nameOnCard === '' ? "input-err" : ""} onChange={this.updateDetails} value={this.state.details.nameOnCard} type="text" placeholder="Your Name..." />
 					</Col>
 				</FormGroup>
 				<FormGroup controlId="cardNumber">
@@ -56,7 +66,7 @@ class Purchase extends Component
 						Card Number
 					</Col>
 					<Col sm={9}>
-						<FormControl onChange={this.updateDetails} value={this.state.details.cardNumber} type="text" placeholder="e.g. 1234567890" />
+						<FormControl className = {this.state.details.cardNumber === '' ? "input-err" : ""} onChange={this.updateDetails} value={this.state.details.cardNumber} type="text" placeholder="e.g. 1234567890" />
 					</Col>
 				</FormGroup>
 				<FormGroup controlId="cvv">
@@ -64,7 +74,7 @@ class Purchase extends Component
 						CCV
 					</Col>
 					<Col sm={9}>
-						<FormControl onChange={this.updateDetails} value={this.state.details.cvv} type="text" placeholder="CVV Number" />
+						<FormControl className = {this.state.details.cvv === '' ? "input-err" : ""} onChange={this.updateDetails} value={this.state.details.cvv} type="text" placeholder="CVV Number" />
 					</Col>
 				</FormGroup>
 				<FormGroup controlId="expirationDate">
@@ -72,14 +82,15 @@ class Purchase extends Component
 						Expiration Date
 					</Col>
 					<Col sm={9}>
-						<FormControl onChange={this.updateDetails} value={this.state.details.expirationDate} type="text" placeholder="e.g. 05/19" />
+						<FormControl className = {this.state.details.expirationDate === '' ? "input-err" : ""} onChange={this.updateDetails} value={this.state.details.expirationDate} type="text" placeholder="e.g. 05/19" />
 					</Col>
 				</FormGroup>
 				<FormGroup>
 					<Col smOffset={2} sm={10}>
-						<Button onClick={this.purchase}>Purchase!</Button>
+						<Button className = {this.state.details.formValidation ? "btn-success" : "btn-danger"} onClick={this.purchase} disabled = {!this.state.details.formValidation}>Purchase</Button>
 					</Col>
 				</FormGroup>
+				<br/>
 			</Form>
 		);
 	}
