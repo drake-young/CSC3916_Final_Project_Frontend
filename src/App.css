@@ -44,6 +44,33 @@
   border-width:thick;
 }
 
+.image{
+	display:inline-block;
+}
+
+/*
+.prod-img{
+	text-align:right;
+}
+*/
+
+.prod-info{
+	text-align:left;
+}
+
+
+.prod-header{
+	text-align:center;
+}
+
+.text-right{
+	text-align:right;
+}
+
+@media (max-width: 767px) {
+    .text-right { text-align:center }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
