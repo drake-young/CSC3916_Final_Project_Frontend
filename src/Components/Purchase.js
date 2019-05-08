@@ -91,7 +91,7 @@ class Purchase extends Component
 				</FormGroup>
 				<FormGroup>
 					<Col smOffset={2} sm={10}>
-						<Button className = {this.state.details.formValidation ? "btn-success" : "btn-danger"} onClick={this.purchase} disabled = {!this.state.details.formValidation}>Purchase</Button>
+						<Button data-toggle="tooltip" title= {this.state.details.formValidation ? "VALID" : "Please Enter Valid Information"} className = {this.state.details.formValidation ? "btn-success" : "btn-danger"} onClick={this.purchase} disabled = {!this.state.details.formValidation}>Purchase</Button>
 					</Col>
 				</FormGroup>
 				<br/>
