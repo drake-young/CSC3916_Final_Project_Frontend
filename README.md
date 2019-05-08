@@ -1,6 +1,6 @@
 # CSC3916_Final_Project_Frontend
 
-##Base URL of React App hosted on Heroku:
+## Base URL of React App hosted on Heroku:
 
 If you want to access the base URL (empty page with a navigation bar at the top) [click here!](https://csc3916-final-project-frontend.herokuapp.com)
 
