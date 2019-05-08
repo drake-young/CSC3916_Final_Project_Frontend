@@ -1,3 +1,13 @@
+# CSC3916_Final_Project_Frontend
+
+##Base URL of React App hosted on Heroku:
+
+If you want to access the base URL (empty page with a navigation bar at the top) [click here!](https://csc3916-final-project-frontend.herokuapp.com)
+
+The primary functionality of the page can be accessed through the "/purchase" route, or by clicking on the "Purchase" navigation option in the top navbar.
+
+##React Acknowledgments
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
