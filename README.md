@@ -6,7 +6,7 @@ If you want to access the base URL (empty page with a navigation bar at the top)
 
 The primary functionality of the page can be accessed through the "/purchase" route, or by clicking on the "Purchase" navigation option in the top navbar.
 
-##React Acknowledgments
+## React Acknowledgments
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
